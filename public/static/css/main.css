@@ -1,0 +1,11 @@
+.ellips{
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  /*cursor: pointer;*/
+  word-break: break-all;
+}
+*{
+  font-family: Helvetica, sans-serif;
+}
