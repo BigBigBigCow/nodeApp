@@ -38,13 +38,16 @@ app.use('/users', usersRouter);
 // app.use('/api/search', Spider);
 // app.use('/spider', Spider);
 app.server = app.listen(8000, () => {
-  console.log(`server running @ http://localhost:8000`)
-})
+  console.log(`server running....`)
+});
 app.get('/api/search',require('./routes/spider'));
 app.get('/api/personalized',require('./routes/personalized'));
 app.get('/api/personalized/newsong',require('./routes/personalized_newSong'));
 app.get('/api/search/hot',require('./routes/search_hot'));
 app.get('/api/top/list',require('./routes/top_list'));
+app.get('/api/song/detail',require('./routes/song_detail'));
+app.get('/api/lyric',require('./routes/lyric'));
+app.get('/simi/playlist',require('./routes/simi_playlists'));
 // console.log('app start success port:3000')
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
