@@ -47,7 +47,8 @@ app.get('/api/search/hot',require('./routes/search_hot'));
 app.get('/api/top/list',require('./routes/top_list'));
 app.get('/api/song/detail',require('./routes/song_detail'));
 app.get('/api/lyric',require('./routes/lyric'));
-app.get('/simi/playlist',require('./routes/simi_playlists'));
+app.get('/api/simi/playlist',require('./routes/simi_playlists'));
+app.get('/api/song/comment',require('./routes/comment_music'));
 // console.log('app start success port:3000')
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
