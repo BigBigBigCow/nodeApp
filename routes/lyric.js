@@ -11,7 +11,7 @@ module.exports = (query, request) => {
     };
     Http(
         'POST', `https://music.163.com/weapi/song/lyric?lv=-1&kv=-1&tv=-1`, data,
-        {crypto: 'weapi', cookie: query.cookie, proxy: query.proxy}
+        {crypto: 'linuxapi', cookie: query.cookie, proxy: query.proxy}
     ).then(res => {
         request.json(res)
     }).catch( err => {
