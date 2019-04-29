@@ -40,15 +40,16 @@ app.use('/users', usersRouter);
 app.server = app.listen(8000, () => {
   console.log(`server running....`)
 });
-app.get('/api/search',require('./routes/spider'));
-app.get('/api/personalized',require('./routes/personalized'));
-app.get('/api/personalized/newsong',require('./routes/personalized_newSong'));
-app.get('/api/search/hot',require('./routes/search_hot'));
-app.get('/api/top/list',require('./routes/top_list'));
-app.get('/api/song/detail',require('./routes/song_detail'));
-app.get('/api/lyric',require('./routes/lyric'));
-app.get('/api/simi/playlist',require('./routes/simi_playlists'));
-app.get('/api/song/comment',require('./routes/comment_music'));
+app.get('/api/search',require('./routes/spider'));//搜索歌曲
+app.get('/api/personalized',require('./routes/personalized'));// 推荐歌单
+app.get('/api/personalized/newsong',require('./routes/personalized_newSong')); // 最新音乐
+app.get('/api/search/hot',require('./routes/search_hot')); // 热搜
+app.get('/api/top/list',require('./routes/top_list')); // 排行榜
+app.get('/api/song/detail',require('./routes/song_detail')); // 歌曲详情
+app.get('/api/lyric',require('./routes/lyric'));  // 歌曲歌词
+app.get('/api/simi/playlist',require('./routes/simi_playlists')); // 包含这首歌的歌单
+app.get('/api/song/comment',require('./routes/comment_music')); // 歌曲评论
+app.get('/api/playlist/detail',require('./routes/playList_detail')); // 歌单详情
 // console.log('app start success port:3000')
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
